@@ -1,0 +1,19 @@
+{
+  "name": "Scheduling Profiler Devtools Integration POC",
+  "version": "1.0.0",
+  "manifest_version": 2,
+
+  "minimum_chrome_version": "49",
+
+  "devtools_page": "main.html",
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": ["main.html", "main.js"],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "permissions": ["file:///*", "http://*/*", "https://*/*", "debugger"]
+}
